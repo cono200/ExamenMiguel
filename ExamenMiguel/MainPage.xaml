@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ExamenMiguel.MainPage">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Calculadora de calorias quedamas"
+            VerticalOptions="CenterAndExpand" 
+            HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>
+
+
+    <StackLayout BackgroundColor="Pink">
+        
+        <Label
+                        TextColor="Black"
+>Ingrese su peso en kilos</Label>
+        <Entry
+        Placeholder="82"
+        Text="{Binding Peso}"
+            x:Name="Peso"
+            Keyboard="Numeric"
+            TextColor="Red"
+            />
+        <Label
+            TextColor="Black">Ingrese la cantidad de tiempo</Label>
+        <Entry
+        Placeholder="52 minutos"
+        Text="{Binding Tiempo}"
+            x:Name="Tiempo"
+            Keyboard="Numeric"
+            TextColor="Red"
+            />
+
+        <Label
+            TextColor="Black">Resultado</Label>
+        <Entry
+            Text="{Binding Resultado}"
+            IsEnabled="False">
+            
+        </Entry>
+
+
+        <Button Command="{Binding CalcularCalorias}"
+                Text="Enviar"></Button>
+
+
+        
+
+        <Image Source="https://i.ibb.co/cCY0Ry6/primero.jpg"
+        IsVisible="false"
+               x:Name="primero"
+        />
+
+    </StackLayout>
+
+</ContentPage>
